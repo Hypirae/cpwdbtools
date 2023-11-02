@@ -23,6 +23,16 @@ Search all pages in a category (Weird).
 ~$ python3 search.py creepypasta.db "search term" --category "Weird"
 ```
 
+## Raw Query
+Raw query allows you to run a raw SQL query against the database. This is useful for more complex queries which are not supported by the other tools.
+
+### Usage
+```bash
+~$ python3 rawquery.py creepypasta.db <enter>
+SELECT * FROM pages WHERE page_title LIKE '%search term%'; <enter>
+<enter>
+```
+
 ## Transform
 For creating machine learning models it is useful to be able to strip a selection of pages of common tokens. This tool will take a category and a directory name to put the processed files into. It will then read all category members from the database, clean their contents, and then save each page to its own text file in the dump directory.
 
